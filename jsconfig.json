@@ -1,0 +1,16 @@
+{
+    "compilerOptions": {
+        "baseUrl": ".",
+        "paths": {
+            "*": [
+                "*",
+                "node_modules/@ali/caf-types/*",
+                "node_modules/@banma/hdt-types/*",
+                "node_modules/@banma/hdt-ui-types/*"
+            ]
+        }
+    },
+    "include": [
+        "src/**/*.js"
+    ]
+}

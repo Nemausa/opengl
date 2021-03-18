@@ -1,0 +1,23 @@
+{
+    "uuid": "e43XMbzM0",
+    "version": "1.0",
+    "lastDevice": "",
+    "product": "AS22L",
+    "keyStoreType": "dev",
+    "keyStorePath": "",
+    "keyStoreAlias": "",
+    "keyStorePassword": "",
+    "jsni": false,
+    "projectType": "jsni",
+    "supportSystemType": "ivi",
+    "cafApiLevel": 5,
+    "script": {
+        "runPreScript": false,
+        "preScriptTimeout": 5000,
+        "preScript": "# Before running the page in project, you may have pre-step to do, such as:\n# mkdir -p /tmp/test && cd /tmp/test\n# ...",
+        "runPostScript": false,
+        "postScriptTimeout": 5000,
+        "postScript": "# After running the page in project, you may have post-step to do, such as:\n# rm -rf /tmp/test\n# ..."
+    },
+    "page": {}
+}

@@ -1,0 +1,41 @@
+{
+  "variables": {
+    "GCC_VERSION": "7.3.0"
+  },
+  "ndk_toolchain": {
+    "compiler": "gcc",
+    "version": "<(GCC_VERSION)"
+  },
+  "app": {
+    "stl": "gnustdc++_shared",
+    "abi": [
+      "x86_64",
+      "armv7a",
+      "x86",
+      "armeabi-v7a-hard",
+      "arm64-v8a"
+    ],
+    "cppflags": [
+      "-std=c++11"
+    ]
+  },
+
+  "targets": [
+    {
+      "target_name": "sample",
+      "type": "shared_library",
+      "src_dirs": [
+        "src"
+      ],
+
+      "ldflags": [
+        "-lpthread",
+        "-ljsni",
+        "-lpagewindow",
+        "-lGLESv2",
+        "-lEGL",
+        "-llog"
+      ]
+    }
+  ]
+}

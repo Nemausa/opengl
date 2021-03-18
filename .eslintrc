@@ -1,0 +1,172 @@
+{
+    "parserOptions": {
+        "ecmaVersion": 2017
+    },
+    "env": {
+        "browser": true,
+        "jasmine": true,
+        "mocha": true,
+        "node": true,
+        "worker": true,
+        "es6": true
+    },
+    "globals": {
+        "cpgf": true,
+        "log": true,
+        "Window": true,
+        "nativeLoad": true,
+        "SharedArrayBufferEx": true,
+        "SharedArrayBuffer": true,
+        "ThreadWorker": true,
+        "onmessage": true,
+        "Atomics": true
+    },
+    "extends": "eslint:recommended",
+    "rules": {
+        "camelcase": [
+            2,
+            {
+                "properties": "never"
+            }
+        ],
+        "curly": [
+            2,
+            "all"
+        ],
+        "eqeqeq": 2,
+        "guard-for-in": 2,
+        "no-extend-native": 2,
+        "indent": [
+            2,
+            4,
+            {
+                "SwitchCase": 1
+            }
+        ],
+        "no-iterator": 2,
+        "no-use-before-define": 2,
+        "new-cap": [
+            2,
+            {
+                "capIsNewExceptionPattern": "\\.(V|D|I|W|E)"
+            }
+        ],
+        "no-caller": 2,
+        "no-sequences": 2,
+        "no-empty": 2,
+        "quotes": [
+            2,
+            "double",
+            {
+                "avoidEscape": true,
+                "allowTemplateLiterals": true
+            }
+        ],
+        "no-extra-parens": 2,
+        "no-shadow": 2,
+        "no-undef": 2,
+        "no-unused-vars": 2,
+        "semi": [
+            2,
+            "always"
+        ],
+        "no-eval": 2,
+        "linebreak-style": [
+            2,
+            "unix"
+        ],
+        "comma-style": [
+            2,
+            "last"
+        ],
+        "no-multi-str": 2,
+        "strict": [
+            2,
+            "global"
+        ],
+        "dot-notation": 2,
+        "no-new-wrappers": 2,
+        "no-with": 2,
+        "no-implicit-coercion": 2,
+        "no-mixed-spaces-and-tabs": 2,
+        "no-multi-spaces": 2,
+        "quote-props": [
+            2,
+            "as-needed",
+            {
+                "keywords": true,
+                "numbers": true,
+                "unnecessary": false
+            }
+        ],
+        "key-spacing": 2,
+        "space-unary-ops": 2,
+        "space-before-function-paren": [
+            2,
+            {
+                "anonymous": "ignore",
+                "named": "never"
+            }
+        ],
+        "func-call-spacing": 2,
+        "space-in-parens": 2,
+        "comma-dangle": 2,
+        "no-trailing-spaces": 2,
+        "eol-last": 2,
+        "space-infix-ops": 2,
+        "keyword-spacing": [
+            2,
+            {
+                "overrides": {
+                    "else": {
+                        "before": true
+                    },
+                    "while": {
+                        "before": true
+                    },
+                    "catch": {
+                        "before": true
+                    }
+                }
+            }
+        ],
+        "spaced-comment": [
+            2,
+            "always"
+        ],
+        "space-before-blocks": [
+            2,
+            "always"
+        ],
+        "consistent-this": [
+            2,
+            "self"
+        ],
+        "array-bracket-spacing": 2,
+        "object-curly-spacing": 2,
+        "one-var-declaration-per-line": 2,
+        "comma-spacing": 2,
+        "semi-spacing": 2
+    },
+    "overrides": [
+        {
+            "parser": "@typescript-eslint/parser",
+            "plugins": [
+                "@typescript-eslint"
+            ],
+            "parserOptions": {
+                "ecmaVersion": 2017,
+                "sourceType": "module"
+            },
+            "files": [
+                "*.ts",
+                "src/**/*.ts"
+            ],
+            "rules": {
+                "no-unused-vars": 0,
+                "strict": 0,
+                "@typescript-eslint/no-angle-bracket-type-assertion": 2
+            }
+        }
+    ]
+}

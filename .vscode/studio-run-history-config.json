@@ -1,0 +1,16 @@
+{
+    "uri": "page://3_OpenglEgl.yunos.com/sample",
+    "signType": 0,
+    "keystore": {
+        "path": "",
+        "alias": "",
+        "password": ""
+    },
+    "uninstallFirst": false,
+    "needTsCompile": false,
+    "sendLinkArgs": {
+        "data": "",
+        "event": ""
+    },
+    "needCompile": false
+}

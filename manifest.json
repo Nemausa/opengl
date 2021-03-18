@@ -1,0 +1,18 @@
+{
+    "domain": {
+        "name": "3_OpenglEgl.yunos.com",
+        "use_sdk": 5,
+        "version_code": 1,
+        "version": "1",
+        "default_locale": "zh-CN"
+    },
+    "pages": [
+        {
+            "title": "3_OpenglEgl",
+            "uri": "page://3_OpenglEgl.yunos.com/sample",
+            "content_path": "src/SamplePage.js",
+            "main": true,
+            "icon": "res/default/images/icon.png"
+        }
+    ]
+}
