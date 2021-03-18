@@ -94,6 +94,7 @@ char *getfileall(char *fname)
     //打开一个文件
     if ((fp=fopen(fname,"r"))==NULL){
         printf("打开文件%s错误\n",fname);
+		logI("Nemausa", "open file error\n");
         return NULL;
     }
     //将文件指针移到末尾
@@ -110,6 +111,7 @@ char *getfileall(char *fname)
         strcat(str,txt);//拼接字符串
     }
     fclose(fp);
+	logI("Nemausa", "filesize=%d", filesize);
     return str;
 }
 
@@ -196,7 +198,7 @@ void changeLayout(int width, int height)
 
 void drawframe()
 {
-	char* srcp = getfileall("nemausa/yufile1.yuv");
+	char* srcp = getfileall("nemausa/yuvfile1.yuv");
 	//char * srcp = (char*)(JSNIGetArgOfCallback(env, info, 0));
 	//__uint32_t size = (__uint32_t)(JSNIToCDouble(env, JSNIGetArgOfCallback(env, info, 1)));
 	int size = 1280*720*3/2;

@@ -26,6 +26,11 @@
 #include <GLES2/gl2.h>
 #include "CameraOpenGLES.h"
 #include <pagewindow/surface_view_context.h>
+#include "yunos/log.h"
+
+#include "CameraOpenGLES.h"
+
+#define TAG "Nemausa"
 
 static GLuint gOffsetLoc = 0;
 static uint32_t gSurfaceID = 0;
@@ -191,6 +196,8 @@ EGLConfig findEglConfig(EGLDisplay eglDisplay, FpEglConfigMatcher matcher, EGLin
 
 
 void *thread_rendering(void *pageToken) {
+
+    logI(TAG, "thread_rendering");
     // init EGL
     void* nativeWin = surfaceViewGetNativeWindow((char *)pageToken, gSurfaceID);
     void* nativeDisplay = surfaceViewGetNativeDisplay((char *)pageToken, gSurfaceID);
@@ -237,14 +244,16 @@ void *thread_rendering(void *pageToken) {
         return NULL;
     }
 
-    initGL();
+    // initGL();
+    init(1280,720);
 
     // render
     int32_t x = 0;
     int32_t y = 0;
     while (gRenderingFlag) {
         usleep(1000 * 500);
-        drawImpl(x, y);
+        //drawImpl(x, y);
+        drawframe();
         eglSwapBuffers(eglDisplay, eglSurface);
         x = x > 300 ? 0 : x + 20;
         y = y > 300 ? 0 : y + 20;
